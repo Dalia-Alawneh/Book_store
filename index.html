@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/sweetalert2/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <style>
+        .error{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="text-center container">
+        <div class="d-flex align-content-center justify-content-center justify-content-between">
+            <div class="w-50 me-5">
+                <img class="w-75" src="book.jpg" alt="book house">
+            </div> 
+            <div class="w-50 mt-5 me-0">
+                <input type="search" placeholder="Search Book" id="search" class="w-50 mt-5 form-control" />
+
+            </div>
+        </div>
+        
+    </header>
+    <section class="ms-5 me-5 text-center">
+        <div class="row">
+            <div class="col-7 me-5"> 
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name of the book</th>
+                            <th>Auther</th>
+                            <th>Number of pages</th>
+                            <th>Price</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="data">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-4 ms-5">
+                <form>
+                    <div class="mb-3">
+                    <input type="text" id="bookName" placeholder="Name of the book" class="form-control input">
+                    <div id="validationServer03Feedback" class="error text-danger small " >
+                        *Please Start with capital letter.
+                    </div>
+                </div>
+                    <div class="mb-3">
+                    <input type="text" placeholder="Auther" class="form-control input" id="auther">
+                    <div id="validationServer03Feedback" class="error text-danger small ">
+                        *Please Start with capital letter.
+                    </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <input type="number" placeholder="Number of pages" class="form-control input" id="pages">
+                        <div id="validationServer03Feedback" class="error text-danger small ">
+                            *Please enter a valid number.
+                        </div>
+                        </div>
+                    <div class="mb-3 mb-5">
+                    <input type="number" placeholder="Price in $" class="form-control input" id="price" >
+                    <div id="validationServer03Feedback" class="error text-danger small ">
+                        *Please enter a valid number.
+                    </div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                    <input  id='add' class="btn btn-primary w-25 me-5" onclick="addBook()" value='Add Book'>
+                    <input  id='clear' class="btn btn-warning w-25 " value='Clear'>
+                </div>
+                </form>
+            </div>
+            </div>
+    </section>
+    <script src="main.js"></script>
+    <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+</body>
+</html>
