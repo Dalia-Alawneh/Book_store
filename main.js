@@ -72,11 +72,15 @@ function deleteBook(id){
                 'Your file has been deleted.',
                 'success'
             )
+            
+            books.splice(id,1);
+            localStorage.setItem('books',JSON.stringify(books));
+            displayBook();
+            }else{
+                displayBook();
             }
         })
-    books.splice(id,1);
-    localStorage.setItem('books',JSON.stringify(books));
-    displayBook();
+    
 }
 let indx=0;
 function editBook(id){
